@@ -19,10 +19,14 @@
   },
   "TIC_TAC_TOE": {
     "contributor-name": [
-      "06RAVI06"
+      "06RAVI06",
+      "Tithi234",
+      "paltannistha"
     ],
     "pull-request-number": [
-      "7"
+      "7",
+      "77",
+      "80"
     ],
     "demo-path": "TIC_TAC_TOE"
   },
@@ -38,11 +42,13 @@
   "Animal-Guess": {
     "contributor-name": [
       "ShashiNova",
-      "Achi-Vyshnavi"
+      "Achi-Vyshnavi",
+      "Tithi234"
     ],
     "pull-request-number": [
       "8",
-      "56"
+      "56",
+      "69"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Animal-Guess"
   },
@@ -148,10 +154,12 @@
   },
   "Pomodoro-Timer": {
     "contributor-name": [
-      "adedayoprcs"
+      "adedayoprcs",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "21"
+      "21",
+      "73"
     ],
     "demo-path": "Pomodoro-Timer"
   },
@@ -187,11 +195,13 @@
   "Digital_Clock": {
     "contributor-name": [
       "DarkSlayer102",
-      "swati-londhe"
+      "swati-londhe",
+      "aishwary-vansh"
     ],
     "pull-request-number": [
       "25",
-      "41"
+      "41",
+      "68"
     ],
     "demo-path": "Digital_Clock"
   },
@@ -281,10 +291,12 @@
   },
   "Auto-Clicker": {
     "contributor-name": [
-      "BasselDar"
+      "BasselDar",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "54"
+      "54",
+      "70"
     ],
     "demo-path": "Auto-Clicker"
   },
@@ -305,5 +317,160 @@
       "62"
     ],
     "demo-path": "Motion-Detection"
+  },
+  "Bowling-Action-Tracking": {
+    "contributor-name": [
+      "musharrafhamraz"
+    ],
+    "pull-request-number": [
+      "67"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bowling-Action-Tracking"
+  },
+  "Encryption_Project": {
+    "contributor-name": [
+      "moonabys",
+      "yumicce"
+    ],
+    "pull-request-number": [
+      "75",
+      "81"
+    ],
+    "demo-path": "Encryption_Project"
+  },
+  "securepass": {
+    "contributor-name": [
+      "Lampard7crypt"
+    ],
+    "pull-request-number": [
+      "72"
+    ],
+    "demo-path": "securepass"
+  },
+  "Biosimilars_Finder": {
+    "contributor-name": [
+      "cmodevcodes"
+    ],
+    "pull-request-number": [
+      "83"
+    ],
+    "demo-path": "Biosimilars_Finder"
+  },
+  "Spell-Sense": {
+    "contributor-name": [
+      "princechaudhary007"
+    ],
+    "pull-request-number": [
+      "82"
+    ],
+    "demo-path": "Spell-Sense"
+  },
+  "Birthday-Paradox": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "86"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Birthday-Paradox"
+  },
+  "BitMap-Message": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "87"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/BitMap-Message"
+  },
+  "Bouncing-DVD": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "89"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bouncing-DVD"
+  },
+  "Dog-Age-Calculator": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "90"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Dog-Age-Calculator"
+  },
+  "Story-Generator": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "91"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Story-Generator"
+  },
+  "slot-machine": {
+    "contributor-name": [
+      "appiokstella"
+    ],
+    "pull-request-number": [
+      "93"
+    ],
+    "demo-path": "slot-machine"
+  },
+  "credit-card-fraud-detection": {
+    "contributor-name": [
+      "zain-cs"
+    ],
+    "pull-request-number": [
+      "94"
+    ],
+    "demo-path": "credit-card-fraud-detection"
+  },
+  "UNO": {
+    "contributor-name": [
+      "mayank-gariya"
+    ],
+    "pull-request-number": [
+      "92"
+    ],
+    "demo-path": "UNO"
+  },
+  "Typing-Speed-Test": {
+    "contributor-name": [
+      "stellaappiok"
+    ],
+    "pull-request-number": [
+      "95"
+    ],
+    "demo-path": "Typing-Speed-Test"
+  },
+  "Titanic-Survival-Prediction": {
+    "contributor-name": [
+      "zain-cs"
+    ],
+    "pull-request-number": [
+      "97"
+    ],
+    "demo-path": "Titanic-Survival-Prediction"
+  },
+  "Duplicate-File-Finder": {
+    "contributor-name": [
+      "zain-cs"
+    ],
+    "pull-request-number": [
+      "98"
+    ],
+    "demo-path": "Duplicate-File-Finder"
+  },
+  "Automatic_file_backup": {
+    "contributor-name": [
+      "stellaappiok"
+    ],
+    "pull-request-number": [
+      "99"
+    ],
+    "demo-path": "Automatic_file_backup"
   }
 }
