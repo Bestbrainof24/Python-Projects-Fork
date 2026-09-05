@@ -1,5 +1,6 @@
 from pathlib import Path
 import shutil
+import time
 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
@@ -60,7 +61,7 @@ if __name__ == "__main__":
     observer.start()
     try:
         while True:
-            pass
+            time.sleep(60)
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
