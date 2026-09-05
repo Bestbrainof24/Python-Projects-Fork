@@ -3,9 +3,9 @@ import shutil
 import time
 
 from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
+from watchdog.events import FileSystemEvent, FileSystemEventHandler
 
-CURRENT_WORKING_DIR = Path.cwd()
+CURRENT_WORKING_DIR: Path = Path.cwd()
 FILE_TYPES: dict[str, list[str]] = {
     "images": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
     "videos": [".mp4", ".mkv", ".avi", ".mov"],
@@ -15,12 +15,12 @@ FILE_TYPES: dict[str, list[str]] = {
 }
 
 class MyHandler(FileSystemEventHandler):
-    def on_created(self, event):
+    def on_created(self, event: FileSystemEvent) -> None:
         if not event.is_directory:
-            file_path = Path(event.src_path)
-            file_name = file_path.name
-            file_extension = file_path.suffix.lower()
-            category = ""
+            file_path: Path = Path(event.src_path)
+            file_name: str = file_path.name
+            file_extension: str = file_path.suffix.lower()
+            category: str = ""
 
             for category_name, extensions in FILE_TYPES.items():
                 if file_extension in extensions:
@@ -29,7 +29,7 @@ class MyHandler(FileSystemEventHandler):
             else:
                 category = "others"
 
-            destination_mapping = {
+            destination_mapping: dict[str, Path] = {
                 "images": CURRENT_WORKING_DIR / "Images",
                 "videos": CURRENT_WORKING_DIR / "Videos",
                 "audio": CURRENT_WORKING_DIR / "Audio Files",
@@ -37,7 +37,7 @@ class MyHandler(FileSystemEventHandler):
                 "archives": CURRENT_WORKING_DIR / "Archives",
                 "others": CURRENT_WORKING_DIR / "Others"
             }
-            destination = destination_mapping[category]
+            destination: Path = destination_mapping[category]
 
             if destination.joinpath(file_name).exists():
                 print(f"File {file_name} already exists in the destination. Renaming it")
@@ -54,7 +54,7 @@ class MyHandler(FileSystemEventHandler):
             shutil.move(file_path, destination_path)
 
 if __name__ == "__main__":
-    folder_to_watch = CURRENT_WORKING_DIR / "monitor"
+    folder_to_watch: Path = CURRENT_WORKING_DIR / "monitor"
     event_handler = MyHandler()
     observer = Observer()
     observer.schedule(event_handler, path=folder_to_watch, recursive=False)  # Set recursive to True if you want to monitor subdirectories
