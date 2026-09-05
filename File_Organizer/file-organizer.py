@@ -13,8 +13,16 @@ FILE_TYPES: dict[str, list[str]] = {
     "documents": [".pdf", ".docx", ".txt"],
     "archives": [".zip", ".rar", ".7z"],
 }
+DESTINATION_MAPPING: dict[str, Path] = {
+    "images": CURRENT_WORKING_DIR / "Images",
+    "videos": CURRENT_WORKING_DIR / "Videos",
+    "audio": CURRENT_WORKING_DIR / "Audio Files",
+    "documents": CURRENT_WORKING_DIR / "Documents",
+    "archives": CURRENT_WORKING_DIR / "Archives",
+    "others": CURRENT_WORKING_DIR / "Others"
+}
 
-class MyHandler(FileSystemEventHandler):
+class FileEventHandler(FileSystemEventHandler):
     def on_created(self, event: FileSystemEvent) -> None:
         if not event.is_directory:
             file_path: Path = Path(event.src_path)
@@ -29,15 +37,7 @@ class MyHandler(FileSystemEventHandler):
             else:
                 category = "others"
 
-            destination_mapping: dict[str, Path] = {
-                "images": CURRENT_WORKING_DIR / "Images",
-                "videos": CURRENT_WORKING_DIR / "Videos",
-                "audio": CURRENT_WORKING_DIR / "Audio Files",
-                "documents": CURRENT_WORKING_DIR / "Documents",
-                "archives": CURRENT_WORKING_DIR / "Archives",
-                "others": CURRENT_WORKING_DIR / "Others"
-            }
-            destination: Path = destination_mapping[category]
+            destination: Path = DESTINATION_MAPPING[category]
 
             if destination.joinpath(file_name).exists():
                 print(f"File {file_name} already exists in the destination. Renaming it")
@@ -55,7 +55,7 @@ class MyHandler(FileSystemEventHandler):
 
 if __name__ == "__main__":
     folder_to_watch: Path = CURRENT_WORKING_DIR / "monitor"
-    event_handler = MyHandler()
+    event_handler = FileEventHandler()
     observer = Observer()
     observer.schedule(event_handler, path=folder_to_watch, recursive=False)  # Set recursive to True if you want to monitor subdirectories
     observer.start()
